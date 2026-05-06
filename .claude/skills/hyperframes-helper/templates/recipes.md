@@ -1,4 +1,4 @@
-# Hyperframes Recipes — copy-paste patterns from the L-0028 kit
+# Hyperframes Recipes — copy-paste patterns
 
 Drop-in snippets you'll reach for often. Each one is battle-tested in a real composition.
 
