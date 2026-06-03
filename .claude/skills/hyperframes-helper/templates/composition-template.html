@@ -25,39 +25,11 @@
     <meta name="viewport" content="width=1920, height=1080" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- brand.css lives at the project root: my-project/brand.css -->
+    <!-- This composition sits at: my-project/videos/video-XX/index.html -->
+    <link rel="stylesheet" href="../../brand.css" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <style>
-      /* =====================================================
-         RoboNuggets design tokens (LOCKED — from DESIGN.md)
-         ===================================================== */
-      :root {
-        --bg: #000;
-        --surface: #0a0a0a;
-        --card: #14161f;
-        --border: #1f2230;
-        --border-2: #2e3244;
-        --text: #e0e0e0;
-        --text-paper: #f1ece0;
-        --text-dim: #888;
-        --muted: #9aa0b0;
-        --accent: #ff6b1a;   /* primary RoboNuggets orange */
-        --teal: #50e3c2;
-        --amber: #f5a623;
-        --violet: #8b5cf6;
-        --cyan: #22d3ee;
-        --pink: #f472b6;
-      }
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      html, body {
-        width: 1920px; height: 1080px; overflow: hidden;
-        background: var(--bg); color: var(--text);
-        font-family: 'Outfit', sans-serif;
-      }
-      #root { position: relative; width: 1920px; height: 1080px; }
 
       /* =====================================================
          Persistent layers (always-on chrome)
@@ -74,7 +46,7 @@
       .watermark {
         position: absolute; left: 36px; bottom: 36px;
         display: flex; align-items: center; gap: 12px;
-        font-family: 'JetBrains Mono', monospace;
+        font-family: var(--font-mono);
         font-size: 16px; font-weight: 700; letter-spacing: 0.18em;
         color: var(--text-dim); text-transform: uppercase;
         padding: 12px 18px; background: rgba(0, 0, 0, 0.45);
@@ -99,13 +71,13 @@
       .scene-title { gap: 32px; padding: 0 80px; }
       .scene-title .kicker {
         display: inline-flex; align-items: center; gap: 14px;
-        font-family: 'JetBrains Mono', monospace;
+        font-family: var(--font-mono);
         font-size: 22px; font-weight: 700; letter-spacing: 0.22em;
         color: var(--accent); text-transform: uppercase;
       }
       .scene-title .kicker svg { width: 26px; height: 26px; flex-shrink: 0; }
       .scene-title h1 {
-        font-family: 'Instrument Serif', serif;
+        font-family: var(--font-display);
         font-weight: 400; font-size: 152px;
         line-height: 0.95; letter-spacing: -0.02em;
         color: var(--text-paper); text-align: center;
@@ -129,14 +101,14 @@
         text-align: center;
       }
       .outro-quote {
-        font-family: 'Instrument Serif', serif;
+        font-family: var(--font-display);
         font-style: italic; font-size: 76px;
         color: var(--text-paper); line-height: 1.22;
         margin-bottom: 30px;
       }
       .outro-quote .hl { color: var(--accent); }
       .outro-attr {
-        font-family: 'JetBrains Mono', monospace;
+        font-family: var(--font-mono);
         font-size: 22px; letter-spacing: 0.22em;
         color: var(--text-dim); text-transform: uppercase;
       }

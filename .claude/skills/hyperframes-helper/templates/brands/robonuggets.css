@@ -1,0 +1,55 @@
+/*
+  Brand: RoboNuggets
+  Aesthetic: Dark-mode tech, orange heat, hexagonal geometry
+  Fonts: Instrument Serif (display) · Outfit (body) · JetBrains Mono (code)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* ── Core surfaces ── */
+  --bg:           #000000;
+  --surface:      #0a0a0a;
+  --card:         #14161f;
+  --border:       #1f2230;
+  --border-2:     #2e3244;
+
+  /* ── Typography ── */
+  --text:         #e0e0e0;
+  --text-paper:   #f1ece0;
+  --text-dim:     #888888;
+  --muted:        #9aa0b0;
+
+  /* ── Accent palette ── */
+  --accent:       #ff6b1a;   /* primary orange */
+  --accent-rgb:   255, 107, 26;
+  --accent-2:     #ff9040;
+  --teal:         #50e3c2;
+  --amber:        #f5a623;
+  --violet:       #8b5cf6;
+  --cyan:         #22d3ee;
+  --pink:         #f472b6;
+
+  /* ── Typography families ── */
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body:    'Outfit', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+  /* ── Mesh / vignette ── */
+  --mesh-stroke:  rgba(255, 255, 255, 0.085);
+  --vignette-a:   rgba(255, 107, 26, 0.04);
+  --vignette-b:   rgba(139, 92, 246, 0.05);
+
+  /* ── Brand identity ── */
+  --brand-label-a: "ROBO";
+  --brand-label-b: "LABS";
+  --brand-icon-color: #ff6b1a;
+}
+
+/* ── Base reset ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 1920px; height: 1080px; overflow: hidden;
+  background: var(--bg); color: var(--text);
+  font-family: var(--font-body);
+}
+#root { position: relative; width: 1920px; height: 1080px; }
